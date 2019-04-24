@@ -7,8 +7,21 @@ import sys
 # Complete the getTotalX function below.
 #
 def getTotalX(a, b):
-    print('a ',a)
-    print('b ',b)
+    # min_a = min(a)
+    # max_a = max(a)
+
+    # min_b = min(b)
+    # max_b = max(b)
+
+    # min_both = min(min_a, min_b)
+    # max_both = max(max_a, max_b)
+
+    # print(min_both, max_both)
+
+    for i in a:
+        for j in range(100):
+            print(i, j)
+
 
 if __name__ == '__main__':
     # f = open(os.environ['OUTPUT_PATH'], 'w')
@@ -28,6 +41,7 @@ if __name__ == '__main__':
     b = [16,32,96]
 
     total = getTotalX(a, b)
+    # print(total)
 
     # f.write(str(total) + '\n')
 
