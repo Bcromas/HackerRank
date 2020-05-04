@@ -1,11 +1,8 @@
-CREATE FUNCTION TriType(p_sideA INT, p_sideB INT, p_sideC INT) RETURNS VARCHAR(14)
-    DETERMINISTIC
-BEGIN
-    DECLARE tri_result varchar(14);
-
-    tri_result = 'Yup!'
-    
- RETURN (tri_result); 
+SELECT
+CASE
+    WHEN A + B <= C OR A + C <= B OR B + C <= A THEN "Not A Triangle"
+    WHEN A = B AND B = C THEN "Equilateral"
+    WHEN A = B OR A = C THEN "Isosceles"
+    ELSE "Scalene"
 END
-
-SELECT ID, TriType(A,B,C) FROM TRIANGLES;
+FROM TRIANGLES;
